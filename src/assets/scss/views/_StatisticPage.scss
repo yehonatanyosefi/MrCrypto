@@ -3,3 +3,14 @@
           margin-inline-end: 5px;
      }
 }
+
+.advanced-charting {
+     padding: $spacing-unit;
+     color: $text-color;
+
+     h2 {
+          margin-bottom: $spacing-unit;
+          text-align: center;
+          color: $accent-color;
+     }
+}

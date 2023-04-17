@@ -25,14 +25,6 @@ $header-shadow-color: rgba(0, 0, 0, 0.25);
                width: 200px;
           }
           .move-list {
-               h2 {
-                    // position: sticky;
-                    // top: 0;
-                    // background-color: $background-color;
-                    // text-shadow: 0 2px 4px $header-shadow-color, // Horizontal offset, vertical offset, blur radius, and shadow color
-                    //           0 4px 8px $header-shadow-color, // Same as above, but with different offset and blur radius
-                    //           0 8px 16px $header-shadow-color; // Same as above, but with different offset and blur radius
-               }
                height: 200px;
                overflow-y: auto;
                overflow-x: hidden;
@@ -41,14 +33,12 @@ $header-shadow-color: rgba(0, 0, 0, 0.25);
                }
           }
      }
-
-     // background-color: rgb(var(--background-rgb));
 .screen {
      margin-block-start: 2.5rem;
      width: 500px;
      display: flex;
      border: 3px solid rgb(var(--primary-rgb) / 80%);
-     aspect-ratio: 14 / 16;
+     aspect-ratio: 13.5 / 16;
      border-radius: 1rem;
      background-color: rgb(var(--primary-rgb) / 15%);
      overflow: hidden;

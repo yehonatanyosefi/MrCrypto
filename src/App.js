@@ -7,18 +7,7 @@ import { ContactDetails } from './views/ContactDetails'
 import { ContactEdit } from './views/ContactEdit'
 import { AppHeader } from './cmps/AppHeader'
 import { LoginSignup } from './views/LoginSignup'
-
-// function MainContent({ route, ...restOfProps }) {
-//     switch (route) {
-//         case 'Home':
-//             return <Home props={restOfProps} />
-//         case 'Contacts':
-//             return <ContactIndex props={restOfProps} />
-//         case 'Chart':
-//             return <StatisticPage props={restOfProps} />
-//     }
-// }
-import React from 'react'
+import { CryptoDashboard } from './cmps/CryptoDashboard'
 
 export default function App() {
     return (
@@ -31,6 +20,7 @@ export default function App() {
                         <Route path="/contact/:id" component={ContactDetails} />
                         <Route path="/contact" component={ContactIndex} />
                         <Route path="/statistic" component={StatisticPage} />
+                        {/* <Route path="/statistic" component={StatisticPage} /> */}
                         <Route path="/loginSignup" component={LoginSignup} />
                         <Route path="/" component={Home} />
                     </Switch>

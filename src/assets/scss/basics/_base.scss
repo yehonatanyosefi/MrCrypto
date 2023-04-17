@@ -91,6 +91,11 @@ input {
   border-radius: em(5px);
 }
 
+.active:not(:has(.logo,.full-logo)) {
+    color: $accent-color;
+    box-shadow: 0 0.1rem 0 0 $accent-color;
+}
+
 // MAC like scrollbar
 ::-webkit-scrollbar {
   width: 8px;
