@@ -1,0 +1,30 @@
+.app-header {
+     background: linear-gradient(90deg,$primary-color, darken($primary-color, 10%));
+     height: $navHeight;
+     @include box-shadow;
+     // @include flex-center;
+     .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-block: 12.5px;
+          
+          a:not(:last-of-type) {
+               margin-inline-end: rem(10px);
+          }
+          a:hover {
+               color: $accent-color;
+          }
+     }
+     .full-logo {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+     
+          .logo {
+               @include flex-center;
+               width: em(35px);
+               height: em(35px);
+          }
+     }
+}

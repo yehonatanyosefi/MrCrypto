@@ -1,0 +1,16 @@
+.contact-edit {
+     display: grid;
+     place-items: center;
+     gap: 5px;
+
+     form {
+          display: grid;
+          place-items: center;
+          gap: 5px;
+
+          section {
+               display: flex;
+               gap: 10px;
+          }
+     }
+}

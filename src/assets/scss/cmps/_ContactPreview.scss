@@ -1,0 +1,48 @@
+.contact-preview {
+    background: radial-gradient(ellipse at center, $primary-color 0%, $card-background-color 120%);
+    box-shadow: 0 0 11px #0000002b;
+    display: flex;
+    flex-direction: column;
+    border-radius: em(10px);
+    position: relative;
+    cursor: pointer;
+    width: rem(300px);
+    .info {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        flex-grow: 1;
+        img {
+            margin-inline-end: em(10px);
+        }
+        h2 {
+            @include ellipsis(calc(100% - 50px));
+        }
+    }
+    button {
+        @include top-leftish;
+        @include flex-center;
+        opacity: 0;
+        background: $accent-color;
+        color: $card-background-color;
+        width: 10px;
+        height: 10px;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.2s opacity 0.2s scale 0.25;
+        &:hover {
+            color: $primary-color;
+            scale: 1.02;
+        }
+    }
+    &:hover {
+        button {
+            opacity: 1;
+        }
+        color: $accent-color;
+    }
+
+    
+}
