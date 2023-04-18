@@ -32,6 +32,7 @@
         border-radius: 50%;
         cursor: pointer;
         transition: background 0.2s opacity 0.2s scale 0.25;
+        @include box-shadow;
         &:hover {
             color: $primary-color;
             scale: 1.02;

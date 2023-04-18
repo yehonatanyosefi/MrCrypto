@@ -7,9 +7,10 @@ import { ContactDetails } from './views/ContactDetails'
 import { ContactEdit } from './views/ContactEdit'
 import { AppHeader } from './cmps/AppHeader'
 import { LoginSignup } from './views/LoginSignup'
-import { CryptoDashboard } from './cmps/CryptoDashboard'
 
 export default function App() {
+
+
     return (
         <Router>
             <section className="main-app">
@@ -20,7 +21,6 @@ export default function App() {
                         <Route path="/contact/:id" component={ContactDetails} />
                         <Route path="/contact" component={ContactIndex} />
                         <Route path="/statistic" component={StatisticPage} />
-                        {/* <Route path="/statistic" component={StatisticPage} /> */}
                         <Route path="/loginSignup" component={LoginSignup} />
                         <Route path="/" component={Home} />
                     </Switch>

@@ -1,5 +1,41 @@
 .transfer-funds {
-     *:not(:last-child) {
-          margin-inline-end: 8px;
+     // *:not(:last-child) {
+     //      margin-inline-end: 8px;
+     // }
+     // padding: 8px;
+     // width: 100px;
+     display: flex;
+     box-shadow: $secondary-color 0px 0px 4px;
+     // box-shadow: rgba(17, 17, 26, 0.25) 0px 1px 0px,
+     // rgba(17, 17, 26, 0.5) 0px 0px 8px;
+     border-radius: em(8px);
+     margin-block: 8px;
+     input {
+          height: 30px;
+          width: 130px;
+          border-radius: em(8px);
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          outline: none;
+          padding-inline: 8px;
+          &:focus {
+               border: 1px solid $secondary-color;
+          }
+     }
+     // background-color: $secondary-color;
+     button {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+          height: 30px;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          transition: scale 0.25s;
+     }
+     button:hover {
+          scale: 1.005;
+     }
+     &:focus-within {
+          box-shadow: $secondary-color 0px 0px 10px;
      }
 }

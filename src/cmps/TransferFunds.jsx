@@ -1,26 +1,34 @@
+import React, { useState } from 'react'
+import { SvgIcon } from './SvgIcon.jsx'
+
 export function TransferFunds({ maxCoins, onTransferCoins }) {
-  
+  const [amount, setAmount] = useState('')
+
   function handleTransfer(ev) {
     ev.preventDefault()
-    const form = ev.currentTarget.form
-    const amount = form.elements.amount
-    const value = +amount.value
-    if (value > maxCoins) return alert("Not enough coins")
+    const value = +amount
+    if (value > maxCoins) return alert('Not enough coins')
     onTransferCoins(value)
-    amount.value = ""
+    setAmount('')
+  }
+
+  function handleAmountChange(ev) {
+    setAmount(ev.target.value)
   }
 
   return (
-    <form className="transfer-funds">
-      <label htmlFor="amount">Transfer Coins</label>
+    <form className="transfer-funds" onSubmit={handleTransfer}>
+      {/* <label htmlFor="amount">Transfer Coins</label> */}
       <input
         type="number"
         name="amount"
         id="amount"
         min="1"
         max={maxCoins}
+        value={amount}
+        onChange={handleAmountChange}
       />
-      <button onClick={handleTransfer}>Transfer</button>
+      <button type="submit">Transfer<SvgIcon iconName="dollar" /></button>
     </form>
   )
 }

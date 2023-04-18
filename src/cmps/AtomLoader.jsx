@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function OrbitLoader() {
+export default function AtomLoader() {
   return (
     <div className="atom-spinner">
       <div className="spinner-inner">

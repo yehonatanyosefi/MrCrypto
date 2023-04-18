@@ -58,14 +58,16 @@ export class ContactDetails extends Component {
         const MOVES_NUMBER = 3
         return (
             <section className='contact-details'>
+                <div className="actions">
                 <button onClick={this.onBack}>Back</button>
+                <Link to={`/contact/edit/${_id}`}><button>Edit</button></Link>
+                </div>
                 <div className='contact-profile'>
                 <h3>Name: {name}</h3>
                 <h3>Email: {email}</h3>
                 <h3>Phone: {phone}</h3>
                 <img src={`https://robohash.org/${_id}?set=set5`}  />
                 </div>
-                <Link to={`/contact/edit/${_id}`}>Edit</Link>
             <TransferFunds maxCoins={coins} onTransferCoins={this.onTransferCoins} />
             {movesToContact && movesToContact.length > 0 &&
             <MovesList title={`Your`} number={movesToContact.length > MOVES_NUMBER ? MOVES_NUMBER : movesToContact.length} moves={movesToContact}>

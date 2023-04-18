@@ -1,4 +1,5 @@
 import { userService } from "../services/user.service"
+import { SvgIcon } from "./SvgIcon"
 
 export function Signup() {
      
@@ -11,6 +12,7 @@ export function Signup() {
   return (
     <div className="signup">
           <form onSubmit={handleSubmit}>
+               <SvgIcon iconName="lock" />
                <label htmlFor="username">Username</label>
                <input id="username" name="username" type="text" placeholder="Username" />
                <label htmlFor="password">Password</label>

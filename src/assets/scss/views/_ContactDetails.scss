@@ -14,4 +14,16 @@ background: rgba(255, 255, 255, 0.12);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     }
+        .actions {
+                display: flex;
+                justify-content: space-between;
+                width: 50%;
+            }
+                        .move-list {
+                            margin-block-start: em(10px);
+                            padding: em(10px) em(20px);
+                            background-color: $card-background-color;
+                            border-radius: em(6px);
+                            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+                        }
 }

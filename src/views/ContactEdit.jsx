@@ -66,8 +66,11 @@ export class ContactEdit extends Component {
 		const { name, phone, email } = contact
 		return (
 			<section className="contact-edit">
+				<div className="actions">
 			<button onClick={this.onBack}>Back</button>
 			<button onClick={this.onRemoveContact}>Delete</button>
+				</div>
+				<div className='edit-preview'>
 				<h1>{contact._id ? 'Edit' : 'Add'} Contact</h1>
                 	{contact._id && <img src={`https://robohash.org/${contact._id}?set=set5`}  />}
 				<form onSubmit={this.onSaveContact}>
@@ -87,6 +90,7 @@ export class ContactEdit extends Component {
 					<button>Save</button>
 					</section>
 				</form>
+				</div>
 			</section>
 		)
 	}

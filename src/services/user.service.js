@@ -56,6 +56,7 @@ async function signup(username, password) {
 }
 
 async function addMove(contact, amount) {
+     if (loggedInUser.coins < amount) return loggedInUser
      const move = {
           toId: contact._id,
           to: contact.name,
